@@ -1,0 +1,123 @@
+@media screen and (max-width: 1100px){
+   .left{
+
+    z-index: 1;
+    position: absolute;
+    display: none;
+    width: 60vw;
+   }
+   .left>.upper{
+    height: 16vh;
+   }
+   .upper img {
+    width: 25%;
+   }
+   .s-card>.song-name {
+    width: 30vw;
+    padding-left: 15px;
+   }
+   .upper h3>img {
+    width: 5.5%;
+   }
+   .s-card {
+    width: 45vw;
+   }
+   .main>.right{
+    width: 100vw;
+   }
+   .left .middel{
+    margin-top: 0;
+   }
+   .upper-right>.ham>img{
+    display: block;
+   }
+   .upper>.ham-close-img{
+    display: block;
+   }
+   .lower-right{
+    width: 90%;
+    position: absolute;
+    bottom: 12px;
+    border-radius: 30px;
+    
+}
+}
+
+@media screen and (max-width: 830px){
+    .lower-right {
+        width: 97%;
+        height: 170px;
+    }
+    .play-img{
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+    .music-name {
+        width: 100%;
+        text-align: center;
+    }
+    .volume-wrap{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px){
+
+.left{
+    width: 100vw;
+   }
+   .upper>.ham-close-img{
+    padding: 10px;
+   }
+   .s-card {
+    width: 80vw;
+   
+   }
+   .song-cards {
+    max-height: 61vh;
+   }
+    
+   .s-card>.song-name {
+    width: 43vw;
+   }
+   .song-cards>.card {
+    height: 318px;
+    width: 250px;
+    margin-left: 0;
+    margin-bottom: 10px;
+   }
+   .left>.upper{
+    height: 17vh;
+   }
+   .left .lower{
+    border-radius: 0;
+   }
+   .left .middel{
+    border-radius: 0;
+   }
+   .left .upper{
+    border-radius: 0;
+   }
+   .song-cards>.card>img {
+    height: 255px;
+    width: 99%;
+    object-fit: cover;
+}
+.song-cards>.card>h3 {
+   
+    font-size: 20px;
+}
+   .song-cards{
+      justify-content: center;
+      gap: 15px;
+   }
+}
+
+@media screen and (max-width: 380px){
+    .song-cards {
+        max-height: 51vh;
+       }
+        
+}
