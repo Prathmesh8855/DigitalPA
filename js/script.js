@@ -83,7 +83,7 @@ async function displayalbum() {
   div.innerHTML = responce;
   let anchors = div.getElementsByTagName("a");
   Array.from(anchors).forEach(async e => {
-    if (e.href.includes("/Song") && !e.href.includes(".htaccess")) {
+    if (e.href.includes("/Song/") && !e.href.includes(".htaccess")) {
       let folder = e.href.split("/").slice(-1)[0];
       let cardcontainer = document.querySelector(".song-cards")
       let b = await fetch(`/Song/${folder}/info.json`);
