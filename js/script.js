@@ -82,12 +82,14 @@ async function displayalbum() {
   let div = document.createElement("div");
   div.innerHTML = responce;
   let anchors = div.getElementsByTagName("a");
-  Array.from(anchors).forEach(async e => {
+  let array = Array.from(anchors);
+   for (let index = 0; index < array.length; index++) {
+    const e = array[index];
     if (e.href.includes("/Song/") && !e.href.includes(".htaccess")) {
-      let folder = e.href.split("/").slice(-1)[0];
+      let folder = e.href.split("/Song")[1];
       let cardcontainer = document.querySelector(".song-cards")
-      let b = await fetch(`/Song/${folder}/info.json`);
-      let responce = await b.json();
+      let a = await fetch(`/Song/${folder}/info.json`);
+      let responce = await a.json();
     
       cardcontainer.innerHTML = cardcontainer.innerHTML + `
                  <div data-folder="${folder}" class="card">
@@ -96,6 +98,12 @@ async function displayalbum() {
                     <p>${responce.disc}</p>
                 </div>
       `
+    }
+   }
+
+
+ 
+   
 
       document.querySelectorAll(".card").forEach(e => {
         e.addEventListener("click", async element => {
@@ -106,9 +114,9 @@ async function displayalbum() {
         })
       })
     }
-  })
+  
 
-}
+  
 
 
 
