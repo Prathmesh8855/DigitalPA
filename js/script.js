@@ -122,7 +122,7 @@ async function displayalbum() {
 
 async function main() {
 
-  await getsong("Song/lovesongs");
+  await getsong("Song/love");
   playsong(songs[0], true)
 
   displayalbum()
